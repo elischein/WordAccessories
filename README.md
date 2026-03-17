@@ -1,6 +1,8 @@
 <div dir="rtl" align="right">
 
-> **משתמשים חדשים בגיטהאב? לא יודעים אנגלית היטב?** 👈 [לחצו כאן למדריך בעברית](guide-he.html)
+<div dir="rtl">
+  <strong>משתמשים חדשים בגיטהאב? לא יודעים אנגלית היטב?</strong> 👈 <a href="guide-he.md">לחצו כאן למדריך בעברית</a>
+</div>
 
 # עזרים לוורד (WordAccessories) 📝
 
