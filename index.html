@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordAccessories - עזרים עוצמתיים לוורד</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Assistant', sans-serif; background-color: #f8f9fa; }
+        .hero { background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%); color: white; padding: 100px 0; }
+        .feature-card { border: none; border-radius: 15px; transition: transform 0.3s; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .feature-card:hover { transform: translateY(-10px); }
+        .icon-box { font-size: 2.5rem; color: #0056b3; margin-bottom: 20px; }
+        .btn-download { padding: 15px 40px; font-size: 1.25rem; border-radius: 50px; font-weight: bold; }
+        .license-section { background-color: #e9ecef; padding: 50px 0; }
+        footer { background: #343a40; color: white; padding: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <header class="hero text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">WordAccessories</h1>
+            <p class="lead fs-3">עזרים לוורד – התוסף שישדרג לכם את העבודה</p>
+            <p class="mb-5">חיסכון בזמן, פונקציות מתקדמות לעורכים, קלדניות ומשתמשים בעברית.</p>
+            <a href="https://github.com/elischein/WordAccessories/releases" class="btn btn-light btn-download text-primary shadow-sm">
+                <i class="fas fa-download me-2"></i> הורד עכשיו (התנסות חינם)
+            </a>
+        </div>
+    </header>
+
+    <section class="container my-5 py-5">
+        <h2 class="text-center mb-5 fw-bold">מה תקבלו בתוסף?</h2>
+        <div class="row g-4 text-center">
+            
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-search"></i></div>
+                    <h4>חיפוש נושא מתקדם</h4>
+                    <p>איתור מהיר של מילות מפתח במסמכים ארוכים או בתיקיות שלמות, כולל הגדרת טווחי מרחק מדויקים בין מילים.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
+                    <h4>מערכת החלפות חכמות</h4>
+                    <p>הפעלת סדרת החלפות שכיחות בלחיצה אחת. תיקון שגיאות OCR, עברית הפוכה ואיתור סוגריים חסרים.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-columns"></i></div>
+                    <h4>עימוד וטורים</h4>
+                    <p>המרת מסמך לטורים בלחיצת כפתור, יישור טורים אוטומטי וכוונון שוליים וגופן להתאמה מושלמת לעמוד.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
+                    <h4>הקלדת ניקוד מהירה</h4>
+                    <p>מנגנון חכם המעביר את הסמן לאות הבאה מיד לאחר הזנת הניקוד – להקלדה רציפה ללא הפסקות.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-list-ol"></i></div>
+                    <h4>מספור עברי ללא הגבלה</h4>
+                    <p>פתרון לבאג של וורד: תמיכה במספור עמודים והערות שוליים באותיות עבריות גם מעבר ל-392 עמודים.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-heading"></i></div>
+                    <h4>כותרות מתקדמות</h4>
+                    <p>עיצוב כותרות עליונות ותחתונות אוטומטיות (StyleRef) המושכות נתונים מתחילת ומסוף העמוד בו זמנית.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="license-section">
+        <div class="container text-center">
+            <h3 class="fw-bold mb-4">רישוי ושימוש</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="fs-5">התוסף זמין להתנסות ללא הגבלה למשך 30 יום. לאחר מכן, נדרשת תרומה להמשך השימוש (פרטים במסך 'אודות' בתוסף).</p>
+                    <div class="alert alert-info shadow-sm">
+                        <i class="fas fa-info-circle me-2"></i>
+                        התוסף תומך בגרסאות Word 2007 ועד Office 365 על מערכות Windows.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 py-5 text-center">
+        <h3 class="fw-bold">צריכים עזרה?</h3>
+        <p>מצאתם באג? יש לכם רעיון לשיפור? אנחנו זמינים ב-GitHub!</p>
+        <a href="https://github.com/elischein/WordAccessories/issues" class="btn btn-outline-primary">דיווח על תקלה</a>
+        <a href="https://github.com/elischein/WordAccessories/discussions" class="btn btn-outline-secondary">דיונים ושאלות</a>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>© 2026 WordAccessories - פותח על ידי elischein</p>
+        </div>
+    </footer>
+
+</body>
+</html>
