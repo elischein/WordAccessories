@@ -3,117 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordAccessories - עזרים עוצמתיים לוורד</title>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>עזרים לוורד (WordAccessories) - סקירת תכונות</title>
     <style>
-        body { font-family: 'Assistant', sans-serif; background-color: #f8f9fa; }
-        .hero { background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%); color: white; padding: 100px 0; }
-        .feature-card { border: none; border-radius: 15px; transition: transform 0.3s; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .feature-card:hover { transform: translateY(-10px); }
-        .icon-box { font-size: 2.5rem; color: #0056b3; margin-bottom: 20px; }
-        .btn-download { padding: 15px 40px; font-size: 1.25rem; border-radius: 50px; font-weight: bold; }
-        .license-section { background-color: #e9ecef; padding: 50px 0; }
-        footer { background: #343a40; color: white; padding: 20px 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 35px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-right: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+        }
+        .system-req {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .system-req h3 {
+            margin-top: 0;
+            color: #16a085;
+        }
     </style>
 </head>
 <body>
 
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold">WordAccessories</h1>
-            <p class="lead fs-3">עזרים לוורד – התוסף שישדרג לכם את העבודה</p>
-            <p class="mb-5">חיסכון בזמן, פונקציות מתקדמות לעורכים, קלדניות ומשתמשים בעברית.</p>
-            <a href="https://github.com/elischein/WordAccessories/releases" class="btn btn-light btn-download text-primary shadow-sm">
-                <i class="fas fa-download me-2"></i> הורד עכשיו (התנסות חינם)
-            </a>
-        </div>
-    </header>
+<div class="container">
+    <h1>עזרים לוורד (WordAccessories)</h1>
+    <div class="subtitle">תוסף עוצמתי ל-Microsoft Word המייעל תהליכי עבודה ומוסיף פונקציות מתקדמות לחסכון בזמן ולשיפור הפרודוקטיביות.</div>
 
-    <section class="container my-5 py-5">
-        <h2 class="text-center mb-5 fw-bold">מה תקבלו בתוסף?</h2>
-        <div class="row g-4 text-center">
-            
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-search"></i></div>
-                    <h4>חיפוש נושא מתקדם</h4>
-                    <p>איתור מהיר של מילות מפתח במסמכים ארוכים או בתיקיות שלמות, כולל הגדרת טווחי מרחק מדויקים בין מילים.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
-                    <h4>מערכת החלפות חכמות</h4>
-                    <p>הפעלת סדרת החלפות שכיחות בלחיצה אחת. תיקון שגיאות OCR, עברית הפוכה ואיתור סוגריים חסרים.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-columns"></i></div>
-                    <h4>עימוד וטורים</h4>
-                    <p>המרת מסמך לטורים בלחיצת כפתור, יישור טורים אוטומטי וכוונון שוליים וגופן להתאמה מושלמת לעמוד.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
-                    <h4>הקלדת ניקוד מהירה</h4>
-                    <p>מנגנון חכם המעביר את הסמן לאות הבאה מיד לאחר הזנת הניקוד – להקלדה רציפה ללא הפסקות.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-list-ol"></i></div>
-                    <h4>מספור עברי ללא הגבלה</h4>
-                    <p>פתרון לבאג של וורד: תמיכה במספור עמודים והערות שוליים באותיות עבריות גם מעבר ל-392 עמודים.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-heading"></i></div>
-                    <h4>כותרות מתקדמות</h4>
-                    <p>עיצוב כותרות עליונות ותחתונות אוטומטיות (StyleRef) המושכות נתונים מתחילת ומסוף העמוד בו זמנית.</p>
-                </div>
-            </div>
-
-        </div>
+    <section>
+        <h2>קהל יעד</h2>
+        <ul>
+            <li>התוסף מותאם במיוחד לעורכי ספרים, קלדניות, מורים, ולכל משתמש המרבה לעבוד עם טקסטים ארוכים בשפה העברית.</li>
+        </ul>
     </section>
 
-    <section class="license-section">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-4">רישוי ושימוש</h3>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="fs-5">התוסף זמין להתנסות ללא הגבלה למשך 30 יום. לאחר מכן, נדרשת תרומה להמשך השימוש (פרטים במסך 'אודות' בתוסף).</p>
-                    <div class="alert alert-info shadow-sm">
-                        <i class="fas fa-info-circle me-2"></i>
-                        התוסף תומך בגרסאות Word 2007 ועד Office 365 על מערכות Windows.
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section>
+        <h2>חיפוש נושא מתקדם</h2>
+        <ul>
+            <li>מנוע חיפוש עצמאי ומהיר לאיתור נושאים לפי מילות מפתח במסמך או אפילו בתיקיות שלמות (כולל תתי-תיקיות), ללא צורך באינדקס מראש.</li>
+            <li>אפשרות להגדרת טווח חיפוש מדויק, כגון מציאת מילות מפתח באותה פסקה או במרחק מילים מסוים, גם ללא חשיבות לסדר הופעתן בטקסט.</li>
+            <li>תמיכה נרחבת בחיפוש ביטויים, צמדי-מילים הצמודות זו לזו, או מילים חלופיות.</li>
+        </ul>
     </section>
 
-    <section class="container my-5 py-5 text-center">
-        <h3 class="fw-bold">צריכים עזרה?</h3>
-        <p>מצאתם באג? יש לכם רעיון לשיפור? אנחנו זמינים ב-GitHub!</p>
-        <a href="https://github.com/elischein/WordAccessories/issues" class="btn btn-outline-primary">דיווח על תקלה</a>
-        <a href="https://github.com/elischein/WordAccessories/discussions" class="btn btn-outline-secondary">דיונים ושאלות</a>
+    <section>
+        <h2>מערכת החלפות חכמות ותיקוני טקסט</h2>
+        <ul>
+            <li>כלי ליצירה, שמירה והפעלה של סדרת החלפות שלמה בבת אחת, כולל תמיכה בתווים כלליים והחלת עיצובים או צבעים על התוצאות.</li>
+            <li>תיקון גורף של שיבושי טקסט ופיסוק שגוי, וכן כלים מובנים לאיתור סוגריים חסרים ותיקון טקסט עברי שהוזן בסדר הפוך.</li>
+            <li>הדבקת טקסט ארוך תוך החלה אוטומטית של סגנון נבחר וביצוע סדרת תיקונים (כגון מחיקת מעברי שורה) בפעולה אחת.</li>
+            <li>הרחבת מנגנון תיקון השגיאות האוטומטי של וורד על ידי הוספה מהירה של מילים יחד עם כל אותיות השימוש.</li>
+        </ul>
     </section>
 
-    <footer class="text-center">
-        <div class="container">
-            <p>© 2026 WordAccessories - פותח על ידי elischein</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+    <section>
+        <h2>עימוד, טורים וטיפול בתמונות</h2>
+        <ul>
+            <li>עיצוב מסמך לשני טורים בלחיצת כפתור, תוך השארת הכותרות בטור אחד, וביצוע יישור חכם לטורים בסוף העמוד.</li>
+            <li>עיצוב אוטומטי של "מילת פתיח" מוגדלת בתחילת פסקה והוספת טאב ליישור ולמרכוז הש
