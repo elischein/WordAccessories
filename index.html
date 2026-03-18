@@ -11,13 +11,36 @@
     <style>
         body { font-family: 'Assistant', sans-serif; background-color: #f8f9fa; }
         
-        /* אזור כותרת מוקטן מעט */
-        .hero { background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%); color: white; padding: 60px 0 80px 0; }
+        /* צמצום גובה ה-Hero */
+        .hero { 
+            background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%); 
+            color: white; 
+            padding: 60px 0 90px 0; /* פדינג מופחת */
+        }
+
+        /* עיצוב התמונה ואנימציית פייד-אין */
+        .ribbon-container { 
+            margin-top: -50px; 
+            position: relative; 
+            z-index: 10; 
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
         
-        /* עיצוב תמונת הסרגל - גלישה מעל אזור הכותרת */
-        .ribbon-container { margin-top: -40px; position: relative; z-index: 10; text-align: center; }
-        .ribbon-img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 3px solid #fff; background-color: #fff; }
-        
+        .ribbon-img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 10px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+            border: 4px solid #fff; 
+            background-color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .feature-card { border: none; border-radius: 15px; transition: transform 0.3s; height: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .feature-card:hover { transform: translateY(-10px); }
         .icon-box { font-size: 2.5rem; color: #0056b3; margin-bottom: 20px; text-align: center; }
@@ -37,7 +60,7 @@
             <h1 class="display-3 fw-bold">WordAccessories</h1>
             <p class="lead fs-3">עזרים לוורד – התוסף שישדרג לכם את העבודה</p>
             <p class="target-audience">מותאם במיוחד לעורכי ספרים, קלדניות, מורים, ולכל משתמש המרבה לעבוד עם טקסטים ארוכים בעברית.</p>
-            <div class="mt-4 mb-3">
+            <div class="mt-4">
                 <a href="https://github.com/elischein/WordAccessories/releases" class="btn btn-light btn-download text-primary shadow-sm">
                     <i class="fas fa-download me-2"></i> הורד עכשיו (התנסות חינם)
                 </a>
@@ -46,7 +69,7 @@
     </header>
 
     <div class="container ribbon-container">
-        <img src="image_863a87.png" alt="תצוגת סרגל הכלים WordAccessories" class="ribbon-img img-fluid">
+        <img src="image_7c49db.png" alt="תצוגת סרגל הכלים WordAccessories" class="ribbon-img img-fluid">
     </div>
 
     <section class="container my-5 py-5">
@@ -58,9 +81,8 @@
                     <div class="icon-box"><i class="fas fa-search"></i></div>
                     <h4>חיפוש נושא מתקדם</h4>
                     <ul>
-                        <li>מנוע חיפוש עצמאי ומהיר במיוחד לאיתור נושאים לפי מילות מפתח, במסמך הנוכחי או בתיקיות שלמות (כולל תתי-תיקיות), ללא צורך באינדקסים מוכנים מראש.</li>
-                        <li>אפשרות להגדרת טווח חיפוש מדויק (לפי פסקאות או מילים).</li>
-                        <li>תמיכה בחיפוש צמדי-מילים ומילים חלופיות.</li>
+                        <li>מנוע חיפוש מהיר לאיתור נושאים ללא צורך באינדקסים מראש.</li>
+                        <li>הגדרת טווח חיפוש מדויק לפי פסקאות או מילים.</li>
                     </ul>
                 </div>
             </div>
@@ -70,9 +92,8 @@
                     <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
                     <h4>מערכת החלפות ותיקונים</h4>
                     <ul>
-                        <li>הפעלת סדרת החלפות שכיחות בלחיצה אחת, כולל תמיכה בתווים כלליים, חיפוש והחלת עיצובים.</li>
-                        <li>תיקון אוטומטי של שגיאות ייבוא (OCR), טקסט עברי הפוך ואיתור סוגריים חסרים.</li>
-                        <li>הדבקת טקסט ארוך תוך החלת סגנון ותיקונים (כמו הסרת מעברי שורה) בפעולה אחת.</li>
+                        <li>הפעלת סדרת החלפות שכיחות בלחיצה אחת.</li>
+                        <li>תיקון אוטומטי של שגיאות OCR וטקסט הפוך.</li>
                     </ul>
                 </div>
             </div>
@@ -82,77 +103,13 @@
                     <div class="icon-box"><i class="fas fa-columns"></i></div>
                     <h4>עימוד, טורים ותמונות</h4>
                     <ul>
-                        <li>המרת מסמך לטורים בלחיצת כפתור, והשארת כותרות בטור אחד.</li>
-                        <li>כוונון עדין של הגדרות גופן, פיסקה ושוליים להתאמה מושלמת לעמוד.</li>
-                        <li>ביצוע יישור חכם לטורים בסוף העמוד.</li>
-                        <li>התאמה אוטומטית של תמונות לרוחב העמוד ופיצול תמונות ארוכות לשניים. (שימושי להדבקת תצלומי ספרים)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
-                    <h4>הקלדת ניקוד חכמה</h4>
-                    <ul>
-                        <li>הסמן עובר אוטומטית לאות הבאה מיד לאחר הזנת הניקוד, מה שמאפשר הקלדה רציפה.</li>
-                        <li>החלפת ניקוד בקליק ללא צורך בהסרת הניקוד הקודם, וכלי ייעודי למחיקת ניקוד מטקסט נבחר.</li>
-                        <li>תמיכה בסימן "רפה" עם אפשרות להגדיר אם יחליף דגש או יבוא בנוסף אליו.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-list-ol"></i></div>
-                    <h4>מספור עברי וקווים למילוי</h4>
-                    <ul>
-                        <li>פתרון לבאג של וורד: תמיכה תקינה במספור עמודים והערות שוליים באותיות עבריות גם מעבר ל-392 עמודים.</li>
-                        <li>מתיחת קווים ישרים (עם אפשרות למספור) מסמן העכבר ועד סוף השורה – אידיאלי ליצירת טפסים ומבחנים.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-heading"></i></div>
-                    <h4>כותרות ותוכן עניינים</h4>
-                    <ul>
-                        <li>עיצוב כותרות עליונות אוטומטיות (StyleRef) המושכות נתונים מתחילת וסוף העמוד במקביל, וחלוקתן ל-3 עמודות.</li>
-                        <li>הוספת תוכן עניינים כטקסט סטטי כדי למנוע איטיות בעבודה על מסמכים כבדים.</li>
-                        <li>ניהול הפניות מקושרות והיפר-קישורים בקלות.</li>
+                        <li>המרת מסמך לטורים עם שמירה על כותרות בטור אחד.</li>
+                        <li>התאמה ופיצול אוטומטי של תמונות לרוחב העמוד.</li>
                     </ul>
                 </div>
             </div>
 
         </div>
-    </section>
-
-    <section class="license-section">
-        <div class="container text-center">
-            <h3 class="fw-bold mb-4">דרישות מערכת ורישוי</h3>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="fs-5">התוסף ניתן להתנסות ללא עלות למשך 30 יום. לאחר מכן, נדרשת תרומה להמשך השימוש (פרטים מלאים במסך 'אודות' בתוך התוסף).</p>
-                    <div class="alert alert-info shadow-sm mt-4 text-start">
-                        <ul class="mb-0 pe-3" style="list-style: none;">
-                            <li><i class="fas fa-check-circle me-2 text-success"></i><strong>מערכת הפעלה:</strong> תואם לסביבת Windows.</li>
-                            <li><i class="fas fa-check-circle me-2 text-success"></i><strong>גרסת אופיס:</strong> תומך בכל גרסאות Microsoft Word, החל מגרסת Word 2007 ועד לגרסאות החדשות ביותר (כולל Office 365).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5 py-5 text-center">
-        <h3 class="fw-bold mb-3">צריכים עזרה או תמיכה טכנית?</h3>
-        <p class="mb-4">התמיכה הטכנית מתבצעת דרך GitHub. מצאתם באג? יש לכם שאלות לגבי השימוש בתוסף? אנחנו כאן!</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://github.com/elischein/WordAccessories/issues" class="btn btn-outline-primary"><i class="fas fa-bug me-2"></i>דיווח על תקלות (Issues)</a>
-            <a href="https://github.com/elischein/WordAccessories/discussions" class="btn btn-outline-secondary"><i class="fas fa-comments me-2"></i>דיונים והדרכות (Discussions)</a>
-        </div>
-        <p class="mt-4 text-muted small">לנושאים שאינם קשורים לתמיכה טכנית, ניתן לפנות לדוא"ל: elischein@gmail.com.</p>
     </section>
 
     <footer class="text-center">
