@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="eCNmN7E9VgzF-qql3reXkqtICJlL09nEtZA2upCnS24" />
     <title>WordAccessories - עזרים לוורד</title>
-    <meta name="description" content="עזרים לוורד – תוסף וכלים מתקדמים ל-Microsoft Word. חיפוש, החלפות ותיקונים, עימוד, ניקוד, מספור עברי, כותרות ותוכן עניינים ועוד.">
+    <meta name="description" content="עזרים לוורד – תוסף וכלים מתקדמים ל-Microsoft Word לכותבים ועורכים בעברית: הכנה להדפסה בלחיצה, חיפוש נושא לפי מילות מפתח, סגנונות, החלפות ותיקונים, כותרות עמוד ותוכן עניינים, ניקוד, מספור עברי ועוד.">
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         body { font-family: 'Assistant', sans-serif; background-color: #f8f9fa; }
-        
+
         /* צמצום גובה הכותרת (Hero) */
-        .hero { 
-            background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%); 
-            color: white; 
-            padding: 60px 0 90px 0; /* מ-100px במקור */
+        .hero {
+            background: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%);
+            color: white;
+            padding: 60px 0 90px 0;
         }
-        
+
         /* מיכל התמונה עם אנימציה */
-        .ribbon-container { 
-            margin-top: -50px; 
-            position: relative; 
-            z-index: 10; 
+        .ribbon-container {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
             text-align: center;
             animation: fadeInAndUp 1.2s ease-out forwards;
             opacity: 0;
         }
 
-        .ribbon-img { 
-            max-width: 90%; 
-            height: auto; 
-            border-radius: 12px; 
-            box-shadow: 0 12px 35px rgba(0,0,0,0.2); 
-            border: 4px solid #fff; 
+        .ribbon-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            border: 4px solid #fff;
             background-color: #fff;
+        }
+        /* במסך צר: גלילה לרוחב במקום רצועה קטנה מכדי לקרוא */
+        @media (max-width: 768px) {
+            .ribbon-scroll { overflow-x: auto; padding-bottom: 8px; }
+            .ribbon-img { max-width: none; width: 900px; }
         }
 
         /* הגדרת אנימציית הטעינה */
@@ -51,8 +56,11 @@
         .feature-card h4 { text-align: center; font-weight: bold; margin-bottom: 15px; }
         .feature-card ul { text-align: right; padding-right: 20px; font-size: 1rem; color: #555; }
         .feature-card li { margin-bottom: 8px; }
+        .badge-new { background: #ffc107; color: #333; font-size: 0.75rem; font-weight: bold; border-radius: 6px; padding: 2px 7px; vertical-align: middle; }
         .btn-download { padding: 15px 40px; font-size: 1.25rem; border-radius: 50px; font-weight: bold; }
         .target-audience { font-size: 1.2rem; margin-top: 15px; opacity: 0.9; }
+        .whats-new { background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .whats-new li { margin-bottom: 6px; }
         .license-section { background-color: #e9ecef; padding: 50px 0; }
         footer { background: #343a40; color: white; padding: 20px 0; }
     </style>
@@ -61,9 +69,9 @@
 
     <header class="hero text-center">
         <div class="container">
-           <h1 class="display-3 fw-bold">עזרים לוורד</h1>
-            <p class="lead fs-3">WordAccessories – תוסף לוורד הכולל מגוון כלי עזר לעבודה יעילה עם מסמכי Word.</p>
-            <p class="target-audience">מותאם במיוחד לעורכי ספרים, קלדנים, מורים, ולכל משתמש המרבה לעבוד עם טקסטים ארוכים בעברית.</p>
+            <h1 class="display-3 fw-bold">עזרים לוורד</h1>
+            <p class="lead fs-3">WordAccessories – תוסף לוורד עם כלי עזר לעבודה יעילה עם מסמכי Word: מכתב יד ועד ספר מוכן לדפוס.</p>
+            <p class="target-audience">מותאם במיוחד למחברים ועורכי ספרים (גם ספרי קודש), קלדנים, מורים, ולכל מי שמרבה לעבוד עם טקסטים ארוכים בעברית.</p>
             <div class="mt-4">
                 <a href="https://github.com/elischein/WordAccessories/releases" class="btn btn-light btn-download text-primary shadow-sm">
                     <i class="fas fa-download me-2"></i> הורד עכשיו (התנסות חינם)
@@ -73,21 +81,64 @@
     </header>
 
     <div class="container ribbon-container">
-        <img src="Ribbon.png" alt="סרגל הכלים עזרים לוורד" class="ribbon-img img-fluid">
+        <div class="ribbon-scroll">
+            <img src="Ribbon.png" alt="רצועת הכלים של עזרים לוורד" class="ribbon-img img-fluid">
+        </div>
     </div>
 
-    <section class="container my-5 py-5">
+    <section class="container mt-5">
+        <div class="whats-new p-4">
+            <h3 class="fw-bold mb-3"><i class="fas fa-star text-warning me-2"></i>חדש בגירסה 4.0</h3>
+            <ul class="mb-2">
+                <li><strong>הכנה להדפסה</strong> מהירה בהרבה, עם דוח איזון טורים ותוכן עניינים גם למסמך שאין בו.</li>
+                <li><strong>עיצוב כותרות עמוד</strong> כמו בספרי קודש: שם הספר, הפרק ומספר העמוד, עם תצוגה מקדימה של ספר פתוח.</li>
+                <li><strong>סדר בסגנונות</strong>: מברשת סגנון, מעבר מעיצוב ידני לסגנונות, איחוד וניקוי סגנונות.</li>
+                <li><strong>צילום מצב</strong>: נקודת חזרה בטוחה לפני כל שינוי גדול, עם השוואה ושחזור.</li>
+                <li><strong>חיפוש</strong> שמוצא יותר: כתיב מלא וחסר, אותיות סופיות, מילים שלא יופיעו, ותצוגת תוצאות חדשה.</li>
+                <li><strong>המרת תאריכים</strong> עבריים ולועזיים, בשילוב "רב לוח".</li>
+            </ul>
+            <a href="https://github.com/elischein/WordAccessories/releases">כל החידושים בעמוד הגירסאות</a>
+        </div>
+    </section>
+
+    <section class="container my-5 py-4">
         <h2 class="text-center mb-5 fw-bold">מה תקבלו בתוסף?</h2>
         <div class="row g-4">
-            
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-print"></i></div>
+                    <h4>הכנה להדפסה בלחיצה</h4>
+                    <ul>
+                        <li>מהמסמך לספר מוכן לדפוס, על עותק – המקור נשאר נקי ונוח לעריכה.</li>
+                        <li>טורים, יישור טורים בכל העמודים, מספור הערות באותיות, כותרות עמוד ותוכן עניינים – בבת אחת.</li>
+                        <li>דוח מסודר: מה נעשה בכל עמוד, ותמונה של עמוד שנשאר לא מיושר.</li>
+                        <li>מספרי עמודים באותיות גם מעל 392, וייצוא ל-PDF ול-PDF/A.</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="col-md-4">
                 <div class="card feature-card p-4">
                     <div class="icon-box"><i class="fas fa-search"></i></div>
                     <h4>חיפוש נושא מתקדם</h4>
                     <ul>
-                        <li>מנוע חיפוש עצמאי ומהיר במיוחד לאיתור נושאים לפי מילות מפתח, במסמך הנוכחי או בתיקיות שלמות (כולל תתי-תיקיות), ללא צורך באינדקסים מוכנים מראש.</li>
-                        <li>אפשרות להגדרת טווח חיפוש מדויק (לפי פסקאות או מילים).</li>
-                        <li>תמיכה בחיפוש צמדי-מילים ומילים חלופיות.</li>
+                        <li>"איפה כתבתי על...?" – איתור לפי מילות מפתח בכל סדר, במסמך או בתיקיות שלמות, בלי אינדקס מראש.</li>
+                        <li>טווח לפי פסקאות או מילים, סדר, צמדי מילים, חלופות ומילים שלא יופיעו.</li>
+                        <li>כתיב מלא או חסר (דוד – דויד) ואותיות סופיות (מלך – מלכים).</li>
+                        <li>גם בהערות, בכותרות ובתיבות טקסט; בקבצי docx,‏ doc,‏ rtf ו-txt.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
+                    <h4>סגנונות <span class="badge-new">חדש</span></h4>
+                    <ul>
+                        <li>מברשת סגנון: מסמנים מראי מקומות וציטוטים תוך כדי קריאה, וההדגשות נשמרות.</li>
+                        <li>מעיצוב ידני לסגנונות מסודרים – בכל המסמך, תוך שניות.</li>
+                        <li>איחוד סגנונות כפולים ("ציטוט", "ציטוט2"...) וניקוי סגנונות מיותרים.</li>
                     </ul>
                 </div>
             </div>
@@ -95,11 +146,37 @@
             <div class="col-md-4">
                 <div class="card feature-card p-4">
                     <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
-                    <h4>מערכת החלפות ותיקונים</h4>
+                    <h4>החלפות ותיקונים</h4>
                     <ul>
-                        <li>הפעלת סדרת החלפות שכיחות בלחיצה אחת, כולל תמיכה בתווים כלליים, חיפוש והחלת עיצובים.</li>
-                        <li>תיקון אוטומטי של שגיאות ייבוא (OCR), טקסט עברי הפוך ואיתור סוגריים חסרים.</li>
-                        <li>הדבקת טקסט ארוך תוך החלת סגנון ותיקונים (כמו הסרת מעברי שורה) בפעולה אחת.</li>
+                        <li>הדבקת טקסט ממאגר או מ-PDF עם סגנון ותיקונים, בלחיצה אחת.</li>
+                        <li>ניקוי שיבושי סריקה (OCR): מעברי שורה, רווחים, גרשיים, טקסט הפוך.</li>
+                        <li>סדרות החלפות משלכם, עם בונה תבניות לתווים כלליים ועיצוב.</li>
+                        <li>בדיקת סוגריים חסרים והפניות שבורות.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-heading"></i></div>
+                    <h4>כותרות עמוד ותוכן עניינים</h4>
+                    <ul>
+                        <li>עיצוב כותרות כמו בספרי קודש: כל חלק בעמודה משלו, מספר העמוד בצד החיצוני.</li>
+                        <li>כותרת רצה מכל סגנון, וקו מפריד לבחירה – גם מעל ההערות.</li>
+                        <li>תוכן עניינים כטקסט, שאינו מאט מסמכים כבדים, וסימניות והפניות מקושרות.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
+                    <h4>הקלדה, ניקוד ותאריכים</h4>
+                    <ul>
+                        <li>ניקוד מהיר: הסמן עובר לאות הבאה, תיקון בלחיצה, ודגש, רפה וקמץ קטן.</li>
+                        <li>קיצורים בתיקון אוטומטי עם כל אותיות השימוש (בכל"מ) בבת אחת.</li>
+                        <li>המרת תאריכים עבריים ולועזיים בכמה ניסוחים (בשילוב "רב לוח").</li>
+                        <li>קווים למילוי, עם מספור – למבחנים וטפסים.</li>
                     </ul>
                 </div>
             </div>
@@ -109,22 +186,9 @@
                     <div class="icon-box"><i class="fas fa-columns"></i></div>
                     <h4>עימוד, טורים ותמונות</h4>
                     <ul>
-                        <li>המרת מסמך לטורים בלחיצת כפתור, והשארת כותרות בטור אחד.</li>
-                        <li>כוונון עדין של הגדרות גופן, פיסקה ושוליים להתאמה מושלמת לעמוד.</li>
-                        <li>ביצוע יישור חכם לטורים בסוף העמוד.</li>
-                        <li>התאמה אוטומטית של תמונות לרוחב העמוד ופיצול תמונות ארוכות לשניים. (שימושי להדבקת תצלומי ספרים)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
-                    <h4>הקלדת ניקוד חכמה</h4>
-                    <ul>
-                        <li>הסמן עובר אוטומטית לאות הבאה מיד לאחר הזנת הניקוד, מה שמאפשר הקלדה רציפה.</li>
-                        <li>החלפת ניקוד בקליק ללא צורך בהסרת הניקוד הקודם, וכלי ייעודי למחיקת ניקוד מטקסט נבחר.</li>
-                        <li>תמיכה בסימן "רפה" עם אפשרות להגדיר אם יחליף דגש או יבוא בנוסף אליו.</li>
+                        <li>מסמך בשני טורים בלחיצה, והכותרות בטור אחד.</li>
+                        <li>יישור טורים חכם בסוף העמוד, וכוונון עדין של גופן, פסקה ושוליים.</li>
+                        <li>התאמת תמונות לרוחב העמוד ופיצול תמונות ארוכות (למשל תצלומי ספרים).</li>
                     </ul>
                 </div>
             </div>
@@ -132,22 +196,23 @@
             <div class="col-md-4">
                 <div class="card feature-card p-4">
                     <div class="icon-box"><i class="fas fa-list-ol"></i></div>
-                    <h4>מספור עברי וקווים למילוי</h4>
+                    <h4>הערות ומספור עברי</h4>
                     <ul>
-                        <li>פתרון לבאג של וורד: תמיכה תקינה במספור עמודים והערות שוליים באותיות עבריות גם מעבר ל-392 עמודים.</li>
-                        <li>מתיחת קווים ישרים (עם אפשרות למספור) מסמן העכבר ועד סוף השורה – אידיאלי ליצירת טפסים ומבחנים.</li>
+                        <li>הורדת קטע להערת שוליים, והעלאת הערות לגוף הטקסט, בלחיצה.</li>
+                        <li>מספור הערות ועמודים באותיות עבריות, גם מעל 392.</li>
+                        <li>מספור אוטומטי מתקדם (SEQ), עם סגנון לכל רצף.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card feature-card p-4">
-                    <div class="icon-box"><i class="fas fa-heading"></i></div>
-                    <h4>כותרות ותוכן עניינים</h4>
+                    <div class="icon-box"><i class="fas fa-camera"></i></div>
+                    <h4>צילום מצב <span class="badge-new">חדש</span></h4>
                     <ul>
-                        <li>עיצוב כותרות עליונות אוטומטיות (StyleRef) המושכות נתונים מתחילת וסוף העמוד במקביל, וחלוקתן ל-3 עמודות.</li>
-                        <li>הוספת תוכן עניינים כטקסט סטטי כדי למנוע איטיות בעבודה על מסמכים כבדים.</li>
-                        <li>ניהול הפניות מקושרות והיפר-קישורים בקלות.</li>
+                        <li>שמירת המסמך כפי שהוא, גם עם שינויים שלא נשמרו – לפני שמנסים שינוי גדול.</li>
+                        <li>השוואה עם סימוני שינויים, ושחזור בלחיצה.</li>
+                        <li>הכלים הגדולים מצלמים את המסמך לבד לפני שהם מתחילים.</li>
                     </ul>
                 </div>
             </div>
@@ -165,6 +230,7 @@
                         <ul class="mb-0 pe-3" style="list-style: none;">
                             <li><i class="fas fa-check-circle me-2 text-success"></i><strong>מערכת הפעלה:</strong> תואם לסביבת Windows.</li>
                             <li><i class="fas fa-check-circle me-2 text-success"></i><strong>גרסת אופיס:</strong> תומך בכל גרסאות Microsoft Word, החל מגרסת Word 2007 ועד לגרסאות החדשות ביותר (כולל Office 365).</li>
+                            <li><i class="fas fa-check-circle me-2 text-success"></i><strong>המרת תאריכים:</strong> נדרשת התקנת "רב לוח" (גירסה 2.2 ומעלה; מומלץ 3.0).</li>
                         </ul>
                     </div>
                 </div>
@@ -174,7 +240,7 @@
 
     <section class="container my-5 py-5 text-center">
         <h3 class="fw-bold mb-3">צריכים עזרה או תמיכה טכנית?</h3>
-        <p class="mb-4">התמיכה הטכנית מתבצעת דרך GitHub. מצאתם באג? יש לכם שאלות לגבי השימוש בתוסף? אנחנו כאן!</p>
+        <p class="mb-4">לכל כלי יש הסבר מפורט בעזרה שבתוך התוסף. התמיכה הטכנית מתבצעת דרך GitHub. מצאתם באג? יש לכם שאלות לגבי השימוש בתוסף? אנחנו כאן!</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="https://github.com/elischein/WordAccessories/issues" class="btn btn-outline-primary"><i class="fas fa-bug me-2"></i>דיווח על תקלות (Issues)</a>
             <a href="https://github.com/elischein/WordAccessories/discussions" class="btn btn-outline-secondary"><i class="fas fa-comments me-2"></i>דיונים והדרכות (Discussions)</a>
